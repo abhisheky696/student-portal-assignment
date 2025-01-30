@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import db from "./firestore";
-import { CiEdit } from "react-icons/ci";
-import { MdDelete } from "react-icons/md";
+// import { CiEdit } from "react-icons/ci";
+// import { MdDelete } from "react-icons/md";
 import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 import { Link } from "react-router-dom";
 
@@ -70,12 +70,11 @@ export const StudentTable = () => {
               <td className="border px-4 py-2">{student.email || "N/A"}</td>
               <td className="border px-4 py-2">
                 <Link to={`/updateStudent/${student.id}`}>
-                  <CiEdit className="inline cursor-pointer" />
+                  <span className="bg-green-400 p-1 rounded-md px-3">Edit</span>
                 </Link>
-                <MdDelete
-                  className="inline ml-4 cursor-pointer"
-                  onClick={() => deleteStudent(student.id)}
-                />
+                <span className="bg-red-400 p-1 rounded-md px-3 cursor-pointer ml-2"
+                  onClick={() => deleteStudent(student.id)}>Delete</span>
+
               </td>
             </tr>
           ))}
