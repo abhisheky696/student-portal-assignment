@@ -30,7 +30,10 @@ const Header = () => {
                 >
                     Student Portal
                 </Link>
-                <div className="lg:hidden flex items-center" onClick={toggleMenu}>
+                <div
+                    className="lg:hidden flex items-center"
+                    onClick={toggleMenu}
+                >
                     <button className="text-3xl cursor-pointer">☰</button>
                 </div>
                 <div className="hidden lg:flex mx-5 flex justify-between">
