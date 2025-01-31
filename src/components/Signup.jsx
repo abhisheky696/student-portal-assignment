@@ -16,7 +16,7 @@ const Signup = () => {
         e.preventDefault();
         setError("");
         try {
-            await createUserWithEmailAndPassword(auth,email,password);
+            //await createUserWithEmailAndPassword(auth,email,password);
             await signInWithEmailAndPassword(auth, email, password);
             console.log("User signed in successfully");
             localStorage.setItem("isAuthenticated", "true");
@@ -64,6 +64,8 @@ const Signup = () => {
                         Login
                     </button>
                 </form>
+                <div>Email:admin@123.com</div>
+                <div>Password:admin@123</div>
             </div>
         </div>
     );
